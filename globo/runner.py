@@ -12,7 +12,7 @@ parser.add_argument("--app_password", type=str, help="Your gmail app password to
 parser.add_argument("--recipients", type=str, help="A comma separated list of one or more recipient email addresses.", required=True)
 parser.add_argument("--todoist", type=bool, help="If workouts should be sent to Todoist instead of gmail. If true, TODOIST_API_TOKEN environment variable is expected to be set.", required=False, default=False)
 
-CURRENT_WORKOUT = workout_program.DumbbellStopGap
+CURRENT_WORKOUT = workout_program.FiveThreeOne
 
 if __name__ == "__main__":
     # Parse the command line arguments
