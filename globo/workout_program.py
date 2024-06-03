@@ -47,7 +47,7 @@ FiveThreeOne = {
     TUE: workout.FiveThreeOneWorkout,
     WED: workout.DownDogYoga,
     THU: workout.FiveThreeOneWorkout,
-    FRI: workout.Climb,
+    FRI: workout.ConditioningA,
     SAT: workout.FiveThreeOneWorkout,
     SUN: workout.DownDogYoga,
 }
