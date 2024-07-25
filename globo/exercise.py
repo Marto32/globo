@@ -348,3 +348,5 @@ FiveThreeOne = Exercise(
 DownDogYoga = Exercise("DownDog Yoga in app", "nolink")
 DumbbellStopgapA = Exercise("Dumbbell stopgap A in Hevy", "https://www.hevy.com/routine/tZLxolj4ZbZ")
 DumbbellStopgapB = Exercise("Dumbbell stopgap B in Hevy", "https://www.hevy.com/routine/bVzdaHlN52Z")
+DownDogHiit = Exercise("DownDog HIIT in app", "nolink")
+ModerateCardio = Exercise("Moderate Cardio", "https://docs.google.com/document/d/12LLrVllsNGavnNCfH3tQiYg0VzyqcMBjZ92hsrmot5c/edit#bookmark=id.mgjgha78gdvn")

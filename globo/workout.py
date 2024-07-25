@@ -142,3 +142,5 @@ FiveThreeOneWorkout = Workout(name="5/3/1 (in sheets and Hevy)", routines=[routi
 DownDogYoga = Workout(name="DownDog Yoga", routines=[routine.DownDogYogaRoutine])
 DumbbellStopgapA = Workout(name="Dumbbell stopgap A", routines=[routine.DumbbellStopgapA])
 DumbbellStopgapB = Workout(name="Dumbbell stopgap B", routines=[routine.DumbbellStopgapB])
+DownDogHiit = Workout(name="DownDog HIIT", routines=[routine.DownDogHiitRoutine])
+ModerateCardio = Workout(name="Moderate Cardio", routines=[routine.ModerateIntensityCardio])

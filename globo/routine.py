@@ -438,3 +438,15 @@ DumbbellStopgapB = ExerciseRoutine(
     instructions="You may be tired, but let's get it done!",
     exercises=[exercise.DumbbellStopgapB]
 )
+
+DownDogHiitRoutine = ExerciseRoutine(
+    name="DownDog HIIT",
+    instructions="60 minutes balanced!",
+    exercise=[exercise.DownDogHiit]
+)
+
+ModerateIntensityCardio = ExerciseRoutine(
+    name="Moderate Intensity Cardio (30 minutes)",
+    instructions="Goal is to tap into the range of endurance where the heart rate is elevated more than Zone 2 but not going all out sprints",
+    exercises=[exercise.ModerateCardio]
+)

@@ -47,9 +47,9 @@ FiveThreeOne = {
     TUE: workout.FiveThreeOneWorkout,
     WED: workout.DownDogYoga,
     THU: workout.FiveThreeOneWorkout,
-    FRI: workout.ConditioningA,
+    FRI: workout.ModerateCardio,
     SAT: workout.FiveThreeOneWorkout,
-    SUN: workout.DownDogYoga,
+    SUN: workout.DownDogHiit,
 }
 
 # See https://old.reddit.com/r/Fitness/comments/zc0uy/a_beginner_dumbbell_program_the_dumbbell_stopgap/
