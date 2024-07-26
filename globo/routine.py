@@ -442,7 +442,7 @@ DumbbellStopgapB = ExerciseRoutine(
 DownDogHiitRoutine = ExerciseRoutine(
     name="DownDog HIIT",
     instructions="60 minutes balanced!",
-    exercise=[exercise.DownDogHiit]
+    exercises=[exercise.DownDogHiit]
 )
 
 ModerateIntensityCardio = ExerciseRoutine(
