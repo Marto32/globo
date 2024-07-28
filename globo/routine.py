@@ -63,7 +63,7 @@ class ExerciseRoutine(object):
             f"- {exercise.as_markdown()}\n"
             for exercise in self.get_exercises()
         ])
-        return f"- {self.name} {self.instructions.rstrip(".")}:\n{exercises_formatted}"
+        return f"- {self.name} {self.instructions.rstrip('.')}:\n{exercises_formatted}"
 
     def __str__(self):
         return self.as_html()
