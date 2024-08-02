@@ -1,4 +1,5 @@
 import datetime
+import random
 import workout
 
 MON, TUE, WED, THU, FRI, SAT, SUN = range(7)
@@ -44,12 +45,11 @@ TrekTraining = {
 
 # See https://thefitness.wiki/routines/5-3-1-for-beginners/
 FiveThreeOne = {
-    TUE: workout.FiveThreeOneWorkout,
-    WED: workout.DownDogYoga,
-    THU: workout.FiveThreeOneWorkout,
-    FRI: workout.ModerateCardio,
-    SAT: workout.FiveThreeOneWorkout,
-    SUN: workout.DownDogHiit,
+    MON: workout.FiveThreeOneWorkout,
+    TUE: workout.DownDogYoga,
+    WED: workout.FiveThreeOneWorkout,
+    THU: workout.DownDogHiit if random.random() < .5 else workout.ModerateCardio,
+    FRI: workout.FiveThreeOneWorkout,
 }
 
 # See https://old.reddit.com/r/Fitness/comments/zc0uy/a_beginner_dumbbell_program_the_dumbbell_stopgap/
