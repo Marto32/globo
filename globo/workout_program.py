@@ -1,5 +1,4 @@
 import datetime
-import random
 import workout
 
 MON, TUE, WED, THU, FRI, SAT, SUN = range(7)
@@ -17,6 +16,7 @@ WS4SB = {
 # Switch back and forth by week so order goes A, B, A, B, ...
 WORKOUT_SWITCH = (datetime.datetime.today().isocalendar()[1] % 2) == 0
 
+
 def _activeRecoverySelector():
     triSwitch = (datetime.datetime.today().isocalendar()[1] % 3) == 0
     if WORKOUT_SWITCH and triSwitch:
@@ -25,6 +25,7 @@ def _activeRecoverySelector():
         return workout.YogaWorkoutB
     else:
         return workout.StretchWorkout
+
 
 BasicStrengthTraining = {
     MON: workout.WorkoutA if WORKOUT_SWITCH else workout.WorkoutB,
@@ -46,9 +47,9 @@ TrekTraining = {
 # See https://thefitness.wiki/routines/5-3-1-for-beginners/
 FiveThreeOne = {
     MON: workout.FiveThreeOneWorkout,
-    TUE: workout.DownDogYoga,
+    TUE: workout.DownDogYogaVinyasa if WORKOUT_SWITCH else workout.DownDogYogaStretch,
     WED: workout.FiveThreeOneWorkout,
-    THU: workout.DownDogHiit if random.random() < .5 else workout.ModerateCardio,
+    THU: workout.DownDogHiit if WORKOUT_SWITCH else workout.ModerateCardio,
     FRI: workout.FiveThreeOneWorkout,
 }
 
@@ -57,5 +58,5 @@ DumbbellStopGap = {
     MON: workout.DumbbellStopgapA if WORKOUT_SWITCH else workout.DumbbellStopgapB,
     WED: workout.DumbbellStopgapB if WORKOUT_SWITCH else workout.DumbbellStopgapA,
     FRI: workout.DumbbellStopgapA if WORKOUT_SWITCH else workout.DumbbellStopgapB,
-    SUN: workout.DownDogYoga,
+    SUN: workout.DownDogYogaVinyasa,
 }
