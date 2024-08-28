@@ -14,7 +14,7 @@ class Workout(object):
         Returns:
             A `string` of HTML formatted workout routines.
         """
-        routines_formatted = ''.join([routine.as_html() for routine in self.routines])
+        routines_formatted = "".join([routine.as_html() for routine in self.routines])
         html = f"""
             <p><b>{self.name}</b></p>
             <ul>
@@ -22,9 +22,11 @@ class Workout(object):
             </ul>"""
 
         return html
-    
+
     def as_markdown(self):
-        routines_formatted = ''.join([routine.as_markdown() for routine in self.routines])
+        routines_formatted = "".join(
+            [routine.as_markdown() for routine in self.routines]
+        )
         return f"""**{self.name}**\n{routines_formatted}"""
 
     def __str__(self):
@@ -40,7 +42,8 @@ MaxEffortUpperBody = Workout(
         routine.RearDeltSuperset,
         routine.Traps,
         routine.ElbowFlexorExercise,
-    ])
+    ],
+)
 
 DynamicEffortLowerBody = Workout(
     name="Dynamic-Effort Lower Body",
@@ -49,7 +52,8 @@ DynamicEffortLowerBody = Workout(
         routine.UnilateralExercise,
         routine.HipExtensionExercise,
         routine.WeightedAbdominals,
-    ])
+    ],
+)
 
 RepetitionUpperBody = Workout(
     name="Repetition Upper Body",
@@ -58,7 +62,8 @@ RepetitionUpperBody = Workout(
         routine.VerticalPullingDeltSuperset,
         routine.MedialDelts,
         routine.TrapsArmsSuperset,
-    ])
+    ],
+)
 
 MaxEffortLowerBody = Workout(
     name="Max-Effort Lower Body",
@@ -67,7 +72,8 @@ MaxEffortLowerBody = Workout(
         routine.UnilateralMovement,
         routine.HamstringMovement,
         routine.GroundBasedAbCricuit,
-    ])
+    ],
+)
 
 # r/Fitness beginner workouts
 WorkoutA = Workout(
@@ -76,7 +82,8 @@ WorkoutA = Workout(
         routine.BarbellRows,
         routine.BenchPress,
         routine.Squats,
-    ])
+    ],
+)
 
 WorkoutB = Workout(
     name="Workout B",
@@ -84,19 +91,22 @@ WorkoutB = Workout(
         routine.Pullups,
         routine.OverheadPress,
         routine.Deadlifts,
-    ])
+    ],
+)
 
 ConditioningA = Workout(
     name="Conditioning A",
     routines=[
         routine.NoExcusesConditioningA,
-    ])
+    ],
+)
 
 ConditioningB = Workout(
     name="Conditioning B",
     routines=[
         routine.NoExcusesConditioningB,
-    ])
+    ],
+)
 
 WorkoutAWithConditioning = Workout(
     name="Workout A + Conditioning",
@@ -105,7 +115,8 @@ WorkoutAWithConditioning = Workout(
         routine.BenchPress,
         routine.Squats,
         routine.NoExcusesConditioningA,
-    ])
+    ],
+)
 
 WorkoutBWithConditioning = Workout(
     name="Workout B + Conditioning",
@@ -114,33 +125,56 @@ WorkoutBWithConditioning = Workout(
         routine.OverheadPress,
         routine.Deadlifts,
         routine.NoExcusesConditioningB,
-    ])
+    ],
+)
 
 StretchWorkout = Workout(
     name="Active Recovery",
     routines=[
         routine.AGTStretchRoutine,
-    ])
+    ],
+)
 
 YogaWorkoutA = Workout(
     name="Yoga - Active Recovery",
     routines=[
         routine.YogaForFlexibilityA,
-    ])
+    ],
+)
 
 YogaWorkoutB = Workout(
     name="Yoga - Active Recovery",
     routines=[
         routine.YogaForFlexibilityB,
-    ])
+    ],
+)
 
-TrekAerobicA = Workout(name="Aerobics and Trek Back A (in Hevy)", routines=[routine.AerobicTrainingA])
-TrekAerobicB = Workout(name="Aerobics and Core A (in Hevy)", routines=[routine.AerobicTrainingB])
+TrekAerobicA = Workout(
+    name="Aerobics and Trek Back A (in Hevy)", routines=[routine.AerobicTrainingA]
+)
+TrekAerobicB = Workout(
+    name="Aerobics and Core A (in Hevy)", routines=[routine.AerobicTrainingB]
+)
 Climb = Workout(name="Climb", routines=[routine.Climb])
-TrekStrength = Workout(name="Strength Training: Trek Lower A (in Hevy)", routines=[routine.TrekStrength])
-FiveThreeOneWorkout = Workout(name="5/3/1 (in sheets and Hevy)", routines=[routine.FiveThreeOneRoutine])
-DownDogYoga = Workout(name="DownDog Yoga", routines=[routine.DownDogYogaRoutine])
-DumbbellStopgapA = Workout(name="Dumbbell stopgap A", routines=[routine.DumbbellStopgapA])
-DumbbellStopgapB = Workout(name="Dumbbell stopgap B", routines=[routine.DumbbellStopgapB])
+TrekStrength = Workout(
+    name="Strength Training: Trek Lower A (in Hevy)", routines=[routine.TrekStrength]
+)
+FiveThreeOneWorkout = Workout(
+    name="5/3/1 (in sheets and Hevy)", routines=[routine.FiveThreeOneRoutine]
+)
+DownDogYogaVinyasa = Workout(
+    name="DownDog Yoga Vinyasa", routines=[routine.DownDogYogaRoutine]
+)
+DownDogYogaStretch = Workout(
+    name="DownDog Yoga Stretch", routines=[routine.DownDogYogaRoutine]
+)
+DumbbellStopgapA = Workout(
+    name="Dumbbell stopgap A", routines=[routine.DumbbellStopgapA]
+)
+DumbbellStopgapB = Workout(
+    name="Dumbbell stopgap B", routines=[routine.DumbbellStopgapB]
+)
 DownDogHiit = Workout(name="DownDog HIIT", routines=[routine.DownDogHiitRoutine])
-ModerateCardio = Workout(name="Moderate Cardio", routines=[routine.ModerateIntensityCardio])
+ModerateCardio = Workout(
+    name="Moderate Cardio", routines=[routine.ModerateIntensityCardio]
+)
