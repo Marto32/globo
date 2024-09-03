@@ -27,6 +27,21 @@ def _activeRecoverySelector():
         return workout.StretchWorkout
 
 
+def _longevityEvenWeekSwitch():
+    """Allows a switch for 'every other even week'"""
+    return (datetime.datetime.today().isocalendar()[1] % 4) == 0
+
+
+def _longevitySwitch():
+    if WORKOUT_SWITCH != 0:
+        return workout.FiveThreeOneWorkout
+
+    if _longevityEvenWeekSwitch():
+        return workout.VO2Max
+
+    return workout.DownDogYogaVinyasa
+
+
 BasicStrengthTraining = {
     MON: workout.WorkoutA if WORKOUT_SWITCH else workout.WorkoutB,
     TUE: workout.ConditioningA if WORKOUT_SWITCH else workout.ConditioningB,
@@ -59,4 +74,14 @@ DumbbellStopGap = {
     WED: workout.DumbbellStopgapB if WORKOUT_SWITCH else workout.DumbbellStopgapA,
     FRI: workout.DumbbellStopgapA if WORKOUT_SWITCH else workout.DumbbellStopgapB,
     SUN: workout.DownDogYogaVinyasa,
+}
+
+AttiaLongevity = {
+    MON: workout.FiveThreeOneWorkout,
+    TUE: workout.Zone2Cardio,
+    WED: workout.FiveThreeOneWorkout,
+    THU: workout.Zone2Cardio,
+    FRI: _longevitySwitch(),
+    SAT: workout.Zone2Cardio,
+    SUN: workout.DownDogYogaStretch,
 }

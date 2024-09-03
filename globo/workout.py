@@ -166,7 +166,7 @@ DownDogYogaVinyasa = Workout(
     name="DownDog Yoga Vinyasa", routines=[routine.DownDogYogaRoutine]
 )
 DownDogYogaStretch = Workout(
-    name="DownDog Yoga Stretch", routines=[routine.DownDogYogaRoutine]
+    name="DownDog Yoga Stretch (Yin)", routines=[routine.DownDogYogaRoutine]
 )
 DumbbellStopgapA = Workout(
     name="Dumbbell stopgap A", routines=[routine.DumbbellStopgapA]
@@ -178,3 +178,6 @@ DownDogHiit = Workout(name="DownDog HIIT", routines=[routine.DownDogHiitRoutine]
 ModerateCardio = Workout(
     name="Moderate Cardio", routines=[routine.ModerateIntensityCardio]
 )
+
+Zone2Cardio = Workout(name="Zone 2 Cardio", routines=[routine.Zone2Cardio])
+VO2Max = Workout(name="VO2 Max", routines=[routine.VO2Max])
