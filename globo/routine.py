@@ -493,3 +493,7 @@ VO2Max = ExerciseRoutine(
     instructions="4 minutes @ max, 4 minutes rest x 4 sets (work up to 6 sets). Stair running, rowing, sprinting.",
     exercises=[exercise.VO2Max],
 )
+
+OffDay = ExerciseRoutine(
+    name="Rest Day", instructions="Relax!", exercises=[exercise.OffDay]
+)

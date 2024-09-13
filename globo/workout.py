@@ -181,3 +181,4 @@ ModerateCardio = Workout(
 
 Zone2Cardio = Workout(name="Zone 2 Cardio", routines=[routine.Zone2Cardio])
 VO2Max = Workout(name="VO2 Max", routines=[routine.VO2Max])
+OffDay = Workout(name="Rest Day", routines=[routine.OffDay])
