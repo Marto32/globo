@@ -332,3 +332,4 @@ ModerateCardio = Exercise(
 )
 Zone2Cardio = Exercise("Zone 2 Cardio", "nolink")
 VO2Max = Exercise("VO2Max", "nolink")
+OffDay = Exercise("Rest day!", "nolink")

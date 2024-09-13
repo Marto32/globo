@@ -27,19 +27,19 @@ def _activeRecoverySelector():
         return workout.StretchWorkout
 
 
-def _longevityEvenWeekSwitch():
+def _longevityRecoveryWeekSwitch():
     """Allows a switch for 'every other even week'"""
     return (datetime.datetime.today().isocalendar()[1] % 4) == 0
 
 
-def _longevitySwitch():
-    if WORKOUT_SWITCH != 0:
-        return workout.FiveThreeOneWorkout
+def _longevityGetWednesday():
+    """Gets the correct wednesday switch based on week."""
+    return workout.FiveThreeOneWorkout if WORKOUT_SWITCH else workout.DownDogYogaVinyasa
 
-    if _longevityEvenWeekSwitch():
-        return workout.VO2Max
 
-    return workout.DownDogYogaVinyasa
+def _longevityGetSunday():
+    """Gets the correct sunday switch based on week."""
+    return workout.DownDogYogaStretch if WORKOUT_SWITCH else workout.VO2Max
 
 
 BasicStrengthTraining = {
@@ -77,11 +77,35 @@ DumbbellStopGap = {
 }
 
 AttiaLongevity = {
-    MON: workout.FiveThreeOneWorkout,
-    TUE: workout.Zone2Cardio,
-    WED: workout.FiveThreeOneWorkout,
-    THU: workout.Zone2Cardio,
-    FRI: _longevitySwitch(),
-    SAT: workout.Zone2Cardio,
-    SUN: workout.DownDogYogaStretch,
+    MON: (
+        workout.Zone2Cardio
+        if _longevityRecoveryWeekSwitch()
+        else workout.FiveThreeOneWorkout
+    ),
+    TUE: (
+        workout.DownDogYogaStretch
+        if _longevityRecoveryWeekSwitch()
+        else workout.Zone2Cardio
+    ),
+    WED: (
+        workout.Zone2Cardio
+        if _longevityRecoveryWeekSwitch()
+        else _longevityGetWednesday()
+    ),
+    THU: (
+        workout.DownDogYogaVinyasa
+        if _longevityRecoveryWeekSwitch()
+        else workout.Zone2Cardio
+    ),
+    FRI: (
+        workout.Zone2Cardio
+        if _longevityRecoveryWeekSwitch()
+        else workout.FiveThreeOneWorkout
+    ),
+    SAT: (
+        workout.DownDogYogaStretch
+        if _longevityRecoveryWeekSwitch()
+        else workout.Zone2Cardio
+    ),
+    SUN: workout.OffDay if _longevityRecoveryWeekSwitch() else _longevityGetSunday(),
 }
