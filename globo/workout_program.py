@@ -78,21 +78,21 @@ DumbbellStopGap = {
 
 AttiaLongevity = {
     MON: (
-        workout.DownDogYogaVinyasa
+        workout.DownDogYogaStretch
         if _longevityRecoveryWeekSwitch()
-        else workout.FiveThreeOneWorkout
+        else workout.Zone2Cardio
     ),
-    TUE: (
-        workout.Zone2Cardio if _longevityRecoveryWeekSwitch() else workout.Zone2Cardio
-    ),
+    # TUE: (
+    #     workout.Zone2Cardio if _longevityRecoveryWeekSwitch() else workout.Zone2Cardio
+    # ),
     WED: (
         workout.Zone2Cardio
         if _longevityRecoveryWeekSwitch()
         else _longevityGetWednesday()
     ),
-    THU: (
-        workout.Zone2Cardio if _longevityRecoveryWeekSwitch() else workout.Zone2Cardio
-    ),
+    # THU: (
+    #     workout.Zone2Cardio if _longevityRecoveryWeekSwitch() else workout.Zone2Cardio
+    # ),
     FRI: (
         workout.DownDogYogaStretch
         if _longevityRecoveryWeekSwitch()
@@ -103,5 +103,9 @@ AttiaLongevity = {
         if _longevityRecoveryWeekSwitch()
         else workout.Zone2Cardio
     ),
-    SUN: workout.OffDay if _longevityRecoveryWeekSwitch() else _longevityGetSunday(),
+    SUN: (
+        workout.DownDogYogaVinyasa
+        if _longevityRecoveryWeekSwitch()
+        else workout.FiveThreeOneWorkout
+    ),
 }
