@@ -497,3 +497,15 @@ VO2Max = ExerciseRoutine(
 OffDay = ExerciseRoutine(
     name="Rest Day", instructions="Relax!", exercises=[exercise.OffDay]
 )
+
+UpperBodyStrength = ExerciseRoutine(
+    name="Attia Strengh - Upper",
+    instructions="Hevy",
+    exercises=[exercise.UpperBodyStrength],
+)
+
+LowerBodyStrength = ExerciseRoutine(
+    name="Attia Strength - Lower",
+    instructions="Hevy",
+    exercises=[exercise.LowerBodyStrength],
+)

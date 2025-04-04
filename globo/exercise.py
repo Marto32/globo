@@ -333,3 +333,9 @@ ModerateCardio = Exercise(
 Zone2Cardio = Exercise("Zone 2 Cardio", "nolink")
 VO2Max = Exercise("VO2Max", "nolink")
 OffDay = Exercise("Rest day!", "nolink")
+UpperBodyStrength = Exercise(
+    "Upper Body Strength in Hevy", "https://hevy.com/routine/XuXszeeqHVo"
+)
+LowerBodyStrength = Exercise(
+    "Lower Body Strength in Hevy", "https://hevy.com/routine/ypb0kvX7OD0"
+)
