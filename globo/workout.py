@@ -179,9 +179,15 @@ ModerateCardio = Workout(
     name="Moderate Cardio", routines=[routine.ModerateIntensityCardio]
 )
 
-Zone2Cardio = Workout(name="Zone 2 Cardio", routines=[routine.Zone2Cardio])
-VO2Max = Workout(name="VO2 Max", routines=[routine.VO2Max])
+Zone2Cardio = Workout(
+    name="Zone 2 Cardio", routines=[routine.Stability, routine.Zone2Cardio]
+)
+VO2Max = Workout(name="VO2 Max", routines=[routine.Stability, routine.VO2Max])
 OffDay = Workout(name="Rest Day", routines=[routine.OffDay])
 
-UpperStrength = Workout(name="Attia Strength", routines=[routine.UpperBodyStrength])
-LowerStrength = Workout(name="Attia Strength", routines=[routine.LowerBodyStrength])
+UpperStrength = Workout(
+    name="Attia Strength", routines=[routine.Stability, routine.UpperBodyStrength]
+)
+LowerStrength = Workout(
+    name="Attia Strength", routines=[routine.Stability, routine.LowerBodyStrength]
+)

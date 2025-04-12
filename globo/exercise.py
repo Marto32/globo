@@ -339,3 +339,6 @@ UpperBodyStrength = Exercise(
 LowerBodyStrength = Exercise(
     "Lower Body Strength in Hevy", "https://hevy.com/routine/ypb0kvX7OD0"
 )
+Stability = Exercise(
+    "Stability Routine in Hevy", "https://hevy.com/routine/CljOMh8n8RL"
+)

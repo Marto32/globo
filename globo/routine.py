@@ -509,3 +509,9 @@ LowerBodyStrength = ExerciseRoutine(
     instructions="Hevy",
     exercises=[exercise.LowerBodyStrength],
 )
+
+Stability = ExerciseRoutine(
+    name="Attia Stability",
+    instructions="10 minutes of stability training. In Hevy and videos [here](https://peterattiamd.com/outlive/videos/)",
+    exercises=[exercise.Stability],
+)
