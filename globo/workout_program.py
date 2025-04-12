@@ -34,7 +34,7 @@ def _longevityRecoveryWeekSwitch():
 
 def _longevityGetWednesday():
     """Gets the correct wednesday switch based on week."""
-    return workout.LowerStrength if WORKOUT_SWITCH else workout.DownDogYogaVinyasa
+    return workout.LowerStrength if WORKOUT_SWITCH else workout.Zone2Cardio
 
 
 def _longevityGetSunday():
@@ -82,20 +82,19 @@ AttiaLongevity = {
         if _longevityRecoveryWeekSwitch()
         else workout.LowerStrength
     ),
-    # TUE: Stability (yoga)
-    TUE: workout.DownDogYogaVinyasa,
+    TUE: workout.Zone2Cardio,
     THU: (
         workout.OffDay if _longevityRecoveryWeekSwitch() else _longevityGetWednesday()
     ),
     FRI: (  # upper body strength
         workout.DownDogYogaStretch
         if _longevityRecoveryWeekSwitch()
-        else workout.FiveThreeOneWorkout
+        else workout.UpperStrength
     ),
     SAT: (workout.OffDay if _longevityRecoveryWeekSwitch() else workout.VO2Max),
     SUN: (
         workout.DownDogYogaVinyasa
         if _longevityRecoveryWeekSwitch()
-        else workout.Zone2Cardio
+        else workout.DownDogYogaStretch
     ),
 }
