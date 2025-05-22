@@ -82,7 +82,6 @@ AttiaLongevity = {
         if _longevityRecoveryWeekSwitch()
         else workout.LowerStrength
     ),
-    TUE: workout.Zone2Cardio,
     THU: (
         workout.OffDay if _longevityRecoveryWeekSwitch() else _longevityGetWednesday()
     ),
@@ -95,6 +94,6 @@ AttiaLongevity = {
     SUN: (
         workout.DownDogYogaVinyasa
         if _longevityRecoveryWeekSwitch()
-        else workout.DownDogYogaStretch
+        else workout.Zone2Cardio
     ),
 }
